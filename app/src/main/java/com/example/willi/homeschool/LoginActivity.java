@@ -41,7 +41,12 @@ public class LoginActivity extends AppCompatActivity {
         if((userName.equals("Admin")) && (userPassword.equals("Admin"))){
             Intent intent = new Intent (LoginActivity.this, AdminActivity.class);
             startActivity(intent);
-        }else{
+        }
+        else if ((userName.equals("Teacher")) && ((userPassword.equals("Teacher")))){
+            Intent intent = new Intent (LoginActivity.this, TeacherActivity.class);
+            startActivity(intent);
+        }
+        else{
             counter --;
 
             Info.setText("No of attempts remaining:" + String.valueOf(counter));
