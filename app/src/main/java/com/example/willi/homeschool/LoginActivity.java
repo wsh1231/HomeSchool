@@ -46,6 +46,10 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent (LoginActivity.this, TeacherActivity.class);
             startActivity(intent);
         }
+        else if ((userName.equals("Parent")) && ((userPassword.equals("Parent")))){
+            Intent intent = new Intent (LoginActivity.this, ParentActivity.class);
+            startActivity(intent);
+        }
         else{
             counter --;
 

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".AdminActivity" />
-        <activity android:name=".TeacherActivity"></activity>
+        <activity android:name=".TeacherActivity" />
+        <activity android:name=".ParentActivity"></activity>
     </application>
 
 </manifest>
