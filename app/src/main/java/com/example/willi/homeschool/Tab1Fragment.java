@@ -3,6 +3,7 @@ package com.example.willi.homeschool;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,10 @@ import android.widget.Toast;
  */
 
 public class Tab1Fragment extends Fragment {
-    private static final String TAG = "Tab1Fragment";
+    private static final String TAG = "Messages";
 
     private Button btnTEST;
+
 
     @Nullable
     @Override
@@ -28,9 +30,13 @@ public class Tab1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "TESTING BUTTON CLICK 1",Toast.LENGTH_SHORT).show();
+
+
             }
         });
 
         return view;
+
+
     }
 }
