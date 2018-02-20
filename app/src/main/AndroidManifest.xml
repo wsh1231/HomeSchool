@@ -19,10 +19,9 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".TeacherActivity" />
         <activity android:name=".ParentActivity" />
-        <activity
-            android:name=".AdminActivity"
-            android:label="@string/title_activity_admin"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".AdminInbox" />
+        <activity android:name=".AdminAttendance"></activity>
     </application>
 
 </manifest>
