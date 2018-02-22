@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <ImageView
-        android:scaleType="fitXY"
         android:id="@+id/imageViewThumbnail"
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
+        android:layout_height="150dp"
+        android:scaleType="fitXY" />
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:padding="16dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Microsoft gives up on Windows 10 Mobile"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:text="Microsoft gives up on Windows 10 Mobile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
             android:id="@+id/textViewDescription"
-            android:layout_marginTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:ellipsize="end"
-            android:text="The company's chief executive tweeted that they were coming up with new ideas but all"
             android:maxLines="2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            android:text="The company's chief executive tweeted that they were coming up with new ideas but all"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 
     </LinearLayout>
@@ -40,3 +48,4 @@
 
 
     </LinearLayout>
+    </android.support.v7.widget.CardView>

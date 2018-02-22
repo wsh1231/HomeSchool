@@ -18,6 +18,7 @@ public class AdminInbox extends AppCompatActivity {
 
         recyclerView=findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.addItemDecoration(new VerticalSpace(20));
         recyclerView.setAdapter(new RecycleViewAdapter(items, this));
 
     }
