@@ -6,10 +6,14 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AdminInbox extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    String[] items={"Item 0", "Item 1","Item 2","Item 3","Item 4","Item 5","Item 6","Item 7","Item 8","Item 9","Item 10","Item 11", "Item 12", "Item 13","Item 14","Item 15","Item 16","Item 17","Item 18","Item 19","Item 20"};
+    RecycleViewAdapter mAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +23,24 @@ public class AdminInbox extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new VerticalSpace(20));
-        recyclerView.setAdapter(new RecycleViewAdapter(items, this));
+        mAdapter = new RecycleViewAdapter(this);
+        recyclerView.setAdapter(mAdapter);
+        feedData();
+    }
 
+    private void feedData() {
+        String[] imageUrls = {"https://cdn.vox-cdn.com/thumbor/PGy7ZvBUHVPW-G1o5_DHuRHANTQ=/0x0:2500x1667/920x613/filters:focal(1050x634:1450x1034):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/58862917/iphone-6s-plus-2-7.0.0.jpg"};
+        String[] titles = {"I got my iPhone’s battery replaced, and I’m angry Apple didn’t tell me to sooner"};
+        String[] description = {"Two weeks ago, I went to an Apple Store and had a new battery put in my iPhone 6S. The very next day, I realized how unusable my old battery had been making my phone."};
+
+        List<ItemDataModel> itemDataModels = new ArrayList<>();
+        for (int i = 0; i < 10; i++){
+            for(int j = 0; j < titles.length; j++){
+                ItemDataModel itemDataModel = new ItemDataModel(imageUrls[j],titles[j], description[j]);
+                itemDataModels.add(itemDataModel);
+            }
+        }
+
+        mAdapter.addModels(itemDataModels);
     }
 }

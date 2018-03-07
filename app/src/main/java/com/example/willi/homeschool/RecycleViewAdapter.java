@@ -10,20 +10,28 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by willi on 17/02/2018.
  */
 
 public class RecycleViewAdapter extends RecyclerView.Adapter {
-    String[] items;
     Context context;
+    List<ItemDataModel> itemDataModels;
 
+public RecycleViewAdapter(Context context){
+    this.context = context;
+    itemDataModels=new ArrayList<>();
 
+}
+public void addModels(List<ItemDataModel>itemDataModels){
+    int pos=this.itemDataModels.size();
+    this.itemDataModels.addAll(itemDataModels);
+    notifyItemRangeInserted(pos, itemDataModels.size());
+}
 
-    public RecycleViewAdapter(String[] items, Context context) {
-        this.items = items;
-        this.context = context;
-    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -34,12 +42,17 @@ public class RecycleViewAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        Picasso.with(context).load(R.drawable.lumia).resize(900,300).into(((ItemHolder)holder).imageViewThumbnail);
+
+        ItemDataModel mCurrentItems=itemDataModels.get(position);
+        ItemHolder itemHolder= (ItemHolder) holder;
+        Picasso.with(context).load(mCurrentItems.imageUrl).resize(900,300).into(itemHolder.imageViewThumbnail);
+        itemHolder.textViewTitle.setText(mCurrentItems.title);
+        itemHolder.textViewDescription.setText(mCurrentItems.description);
     }
 
     @Override
     public int getItemCount() {
-        return items.length;
+        return itemDataModels.size();
     }
 
     private class ItemHolder extends RecyclerView.ViewHolder{
