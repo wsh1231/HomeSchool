@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "534135004648",
+    "firebase_url": "https://homeschool-2d3e0.firebaseio.com",
+    "project_id": "homeschool-2d3e0",
+    "storage_bucket": "homeschool-2d3e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534135004648:android:e0c51dc4db05e2df",
+        "android_client_info": {
+          "package_name": "com.example.willi.homeschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534135004648-hgq2c39iu0qaguuf4vfhi0l2hh34fvb1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.willi.homeschool",
+            "certificate_hash": "289819b583088f127cdae21422a24fdbed1cbfe1"
+          }
+        },
+        {
+          "client_id": "534135004648-lso0duaikdt52iuqgmivfnmd9adqi8oh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC44B-WjTItfljnQV9R4J9wGlg266h_FeM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534135004648-lso0duaikdt52iuqgmivfnmd9adqi8oh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

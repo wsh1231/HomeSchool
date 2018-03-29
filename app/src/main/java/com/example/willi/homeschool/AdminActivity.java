@@ -16,6 +16,8 @@ public class AdminActivity extends AppCompatActivity {
         //Declare buttons
         Button Inboxbtn = (Button)findViewById(R.id.inboxButton);
         Button Attendancebtn = (Button) findViewById(R.id.attendanceButton);
+        Button smsButton = (Button) findViewById(R.id.sendSMS);
+
 
         //Button to Admin Inbox
         Inboxbtn.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +32,14 @@ public class AdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AdminActivity.this, AdminAttendance.class));
+            }
+        });
+
+        //Button to send SMS Button
+        smsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminActivity.this, smsmessage.class));
             }
         });
 
