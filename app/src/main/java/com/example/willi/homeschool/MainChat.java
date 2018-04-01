@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.text.format.DateFormat;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
@@ -19,6 +21,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+
 
 public class MainChat extends AppCompatActivity {
 
@@ -35,7 +38,7 @@ public class MainChat extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     Snackbar.make(activity_main_chat, "You have been signed out.", Snackbar.LENGTH_SHORT).show();
-                    finish()
+                    finish();
                 }
             });
         }
@@ -103,9 +106,24 @@ public class MainChat extends AppCompatActivity {
         ListView listOfMessage = (ListView)findViewById(R.id.list_of_messages);
         adapter = new FirebaseListAdapter<ChatMessage>(this, ChatMessage.class, R.layout.list_item, FirebaseDatabase.getInstance().getReference())
         {
-            
+            @Override
+            protected void populateView(View v, ChatMessage model, int position) {
+                //Get references to the views of list item.xml
+                TextView messageText,messageUser,messageTime;
+                messageText = (TextView)findViewById(R.id.message_text);
+                messageUser = (TextView)findViewById(R.id.message_user);
+                messageTime = (TextView)findViewById(R.id.message_time);
 
-        }
+                messageText.setText(model.getMessageText());
+                messageUser.setText(model.getMessageUser());
+                messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getMessageTime()));
+
+
+
+            }
+        };
+        listOfMessage.setAdapter(adapter);
+
 
     }
 }
