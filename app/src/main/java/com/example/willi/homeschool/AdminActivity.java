@@ -23,7 +23,7 @@ public class AdminActivity extends AppCompatActivity {
         Inboxbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdminActivity.this, AdminInbox.class));
+                startActivity(new Intent(AdminActivity.this, MainChat.class));
             }
         });
 
