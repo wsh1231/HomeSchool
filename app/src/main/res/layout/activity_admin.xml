@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/inboxButton"
-        android:layout_width="wrap_content"
+        android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -20,12 +20,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29" />
+        app:layout_constraintVertical_bias="0.628" />
 
     <Button
         android:id="@+id/attendanceButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="356dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -36,13 +36,13 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inboxButton"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.639" />
 
     <Button
         android:id="@+id/sendSMS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
         android:text="Send Message"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="283dp" />
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="347dp" />
 </android.support.constraint.ConstraintLayout>
