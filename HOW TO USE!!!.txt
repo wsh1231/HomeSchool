@@ -1,0 +1,14 @@
+To Log In
+
+Admin Activity
+Username : Admin
+Password : Admin
+
+Teacher Activity
+Username : Teacher
+Password : Teacher
+
+Parent Activity
+Username : Parent
+Password : Parent
+
