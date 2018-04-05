@@ -28,7 +28,8 @@
         <activity android:name=".AdminAttendance" />
         <activity android:name=".smsmessage" />
         <activity android:name=".MainChat" />
-        <activity android:name=".SplashScreenActivity"></activity>
+        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".PrivateEmail"></activity>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@ public class AdminActivity extends AppCompatActivity {
         Button smsButton = (Button) findViewById(R.id.sendSMS);
 
 
-        //Button to Admin Inbox
+        //Button to Discussion board
         Inboxbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +31,7 @@ public class AdminActivity extends AppCompatActivity {
         Attendancebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdminActivity.this, AdminAttendance.class));
+                startActivity(new Intent(AdminActivity.this, PrivateEmail.class));
             }
         });
 
@@ -42,8 +42,6 @@ public class AdminActivity extends AppCompatActivity {
                 startActivity(new Intent(AdminActivity.this, smsmessage.class));
             }
         });
-
-
 
 
 

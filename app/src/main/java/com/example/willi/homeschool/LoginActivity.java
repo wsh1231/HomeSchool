@@ -20,13 +20,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        //Declaring variables
         Name = (EditText)findViewById(R.id.etName);
         Password = (EditText)findViewById(R.id.etPassword);
         Info = (TextView)findViewById(R.id.tvInfo);
         Login = (Button)findViewById(R.id.btnLogin);
         Info.setText("No of attempts remaining: 5");
-
+        //Takes in Name string and Password string and naviagates to the appropriate actvity
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
-
     private void validate(String userName, String userPassword){
 
         if((userName.equals("Admin")) && (userPassword.equals("Admin"))){
@@ -59,14 +58,5 @@ public class LoginActivity extends AppCompatActivity {
                 Login.setEnabled(false);
             }
         }
-
-
-
     }
-
-
-
-
-
-
 }
